@@ -1,0 +1,517 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+        
+        <title> Julien Schmaltz | TU Eindhoven | Teaching | 2IMF20 </title>
+    </head>
+
+<H1>2IMF20 Hardware Verification</H1>
+
+
+<p> Welcome to the course pages of 2IMF20 Hardware Verification! </p>
+
+<p> Lectures are every Tue. 13:30--15:15 in TR VAN TRIER and every Thu. 08:45--10:30 in AUD 13.</p> 
+
+<p> Examination is on November 6th from 9:00 to 12:00 in room TBA. </p>
+
+<p> On this website you will find materials like slides, assigments, and pointers to papers. 
+Regarding papers, we will point to the publisher website. 
+The TU/e digital library should give you access to these papers. Let me know if you have troubles 
+downloading any paper. </p> 
+
+<p> The teaching materials will consist of lecture notes (short) and slides. Still, I used (at least) the 
+following three books to prepare the lectures:
+  <ul>
+    <li> <b> Formal verification: An essential toolkit for modern VLSI design</b> by Sleligman, Schubert, and Kumar</li>
+    <li> <b> Model Checking </b>, by Clarke, Grumberg, and Peled</li>
+    <li> <b> Principles of model checking</b> by Baier and Katoen</li>
+  </ul>
+The first one is very practical. That would be my first suggestion. The second one has more theoretical background 
+but is still short and focused. The third one is theoretically oriented. It covers many topics and is therefore
+quite thick. Its advantage that it contains (almost) everything.
+</p>
+
+<p>Note that these books are mentioned to give you pointers. It is absolutely not mandatory to buy them. But, if like me you like books, then having one will not hurt ! </p>
+
+<hr>
+
+<H2>Pre-requisities</H2>
+
+<p>The course will do its best to be self-contained. But, we assume you are familiar with:
+  <ul>
+    <li>Basic logic and set theory concepts (like propositional logic and possibly modal logics)</li>
+    <li>Basic knowledge of algorithms (depth-first, breadth-first, etc)</li>
+  </ul> 
+
+  If you have a bachelor in Computer Science, you should have most of these pre-requisites.
+</p>
+
+<p>  Relevant bachelor courses 
+  tought in Eindhoven would be Logic and Set Theory, Computer Systems, Automata and Process Theory, Data Structures and Algorithms. </p>
+
+  <p>
+  At the master level, related courses are Automated Reasoning, System Validation, Algorithms for Model Checking, Process algebra, Program verification techniques, VLSI Programming, Electronic Design Automation, Digital circuit design.</p>
+
+<hr>
+
+<H2>Practical Assignments</H2>
+
+<p> You will here find two preparation exercises. These 
+exercises are meant for you to practice and learn necessary
+knowledge before tackling the design project (see below).
+These exercises will not be graded. Solutions will be discussed
+during lectures.</p>
+
+  <ul>
+
+    <li> <b> Verifying communication fabrics with Cadence JasperGold </b> The second 
+    exercise is about using Cadence JasperGold to prove correctness of a small design. 
+    The text of the assignment is <a href="p02_jg_comfab_2018.pdf"> here</a>.
+    <a href="allprim_js_solution.v"> Here</a> is a possible solution. The solution
+    is not perfect but gives an idea about how to write basic assertions. 
+    </li>
+   <li> <b> Combinatioral Equivalence Checking with SAT </b>
+      The first exercise is about reading two circuits and generating a CNF 
+      file that is SAT if and only the circuits are different.
+      Please follow this <a href="assignment2.html"> link</a> to start 
+      this assignment.
+      </li>
+  </ul> 
+
+<p> You will find here the design project: 
+ <ul>
+
+    <li> <b> Processor verification with JasperGold </b> 
+    The third assignment is about using Jasper and System Verilog
+    Assertions to verify a simple 8-bit microprocessor. The description
+    of the assignment is <a href="assignment_jg_alu.pdf">here</a>. 
+    The deadline for handing-in your solution if <b> Monday October
+    22nd, 2018 at noon</b>. No extension will be granted. To help you with the assignment
+    you can use the following template: 
+     <ul>      
+      <li> Template design for the processor <a href="core8_template.v"> 
+      core8_template.v</a> </li>
+    </ul>
+    </li>    
+  </ul> 
+</p>
+
+
+
+<p> You fill find here papers describing NoC architectures. If you feel 
+you need to be more challenged in this course, you can select 
+one of these designs instead of the processor described above.
+
+<ul>
+  <li> <a href="https://scinapse.io/papers/2111927499">Spidergon</a>: this is one of the first industrial proposal
+  for a Network-on-Chip. Simple but has interesting way to scale up.</li>
+  <li> <a href="https://www.sciencedirect.com/science/article/pii/S0167926004000185?via%3Dihub">HERMES</a>: this is one of the first academic proposal.</li>
+  <li> <a href="https://dl.acm.org/citation.cfm?id=2555312">Tornado</a>: recent academic design. Ring network with
+  interesting features to avoid deadlock. </li>
+  <li> <a href="https://dl.acm.org/citation.cfm?doid=2400682.2400696">Ligero</a>: recent academic design. Ring network where 
+  packets never stop travelling, somehow similar to hot-patato routing. </li>
+</ul>
+
+</p>
+
+
+<hr>
+
+<H2>READER</H2>
+
+<p> Below are some lectures notes (content of these chapters is subject to 
+modifications):
+  <ul>
+    <li> <a href= "Chapter-2.pdf"> Chapter 2 </a> about Boolean models, combinatorial equivalence, and some exercises.</li>
+    <li> <a href= "Chapter-4.pdf"> Chapter 4 </a>  about temporal logics.</li>
+    <li> <a href= "Chapter5.pdf"> Chapter 5 </a> about model checking with BDDs and without BDDs. </li>
+    
+  </ul>
+</p> 
+
+
+<hr> 
+
+
+<H2>PREVIOUS EXAMINATIONS</H2>
+
+<p> Here are old examinations so that you can practice.
+  <a href="exam_2015_1.pdf"> Examination 2015</a> and <a href="exam_2016.pdf"> Examination 2016 </a>
+  and <a href="exam_2017.pdf"> Examination 2017</a>.
+</p>
+
+<hr>
+
+<H2> Thursday 01.11.2018 </H2>
+<p> No lecture.</p>
+
+<hr> 
+
+<H2> Tuesday 30.10.2018 </H2>
+<p> We will have a Q&A sessions. Come with your questions !</p>
+
+<hr> 
+
+<H2> Thursday 25.10.2018 </H2>
+<p> No lecture.</p>
+
+<hr> 
+
+<H2> Tuesday 23.10.2018 </H2>
+<p> Feedback assignment 3, previous examination, Q&A. Below are old examinations. 
+  We will do the one from 2017.
+  <a href="exam_2015_1.pdf"> Examination 2015</a> 
+  and <a href="exam_2016.pdf"> Examination 2016 </a> 
+  and <a href="exam_2017.pdf"> Examination 2017 </a>. </p>
+
+<hr> 
+
+ <H2> Thursday 18.10.2018 </H2>
+
+ <p> Practical session to help with the assignment.</p>
+<!-- 
+<p> We will look at the solutions to assignment 2. We will look 
+  at the verification of communication fabrics.
+  The slides are <a href="2IMF20_Lecture06.pdf">here</a> </p>
+ -->
+
+<hr> 
+
+<H2> Tuesday 16.10.2018</H2>
+<p> Guest lecture by Martin Barnasconi (NXP) over verification for 
+  AMS (Analog Mixed Signals) designs. Slides: see CANVAS.</p>
+
+<hr>
+
+<H2> Thursday 11.10.2018 </H2>
+
+<p> We will have a pracical session about assignment 3. You will be able 
+to ask questions and get help with Jasper and the small micro-processor. </p>
+
+<hr> 
+
+<H2> Tuesday 9.10.2018 </H2>
+
+<p> Guest lecture from Simon de Groot and Frank Elfrink from 
+Dialog Semiconductors. Slides: see CANVAS. </p>
+
+
+<hr>
+
+<H2> Thursday 04.10.2018 </H2>
+
+<p>  ** NO LECTURE **</p>
+
+<hr>
+
+<H2> Tuesday 02.10.2018</H2>
+
+<p> We will continue the lecture about Bounded Model Checking. </p>
+
+
+
+<hr>
+
+<H2> Thursday 27.09.2018</H2>
+
+<p> Here are slides about the Kripke 
+semantics for LTL and CTL: <a href="2IMF20_Lecture04_part2.pdf">Slides</a>.
+  We will then cover symbolic model-checking with BDD's.
+  Next week, we will continue with SAT-based bounded model-checking. 
+The slides about Symbolic and SAT-based bounded model-checking are  
+<a href="2IMF20_Lecture05.pdf">here</a>. 
+Chapter-5 of the reader above covers these topics. </p>
+
+<p> <b> Reading Assignment </b> Here is the original paper about bounded model 
+checking. The lecture is basically based on this paper:
+
+  <ul>
+    <li> <a href="https://www.google.nl/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&cad=rja&uact=8&ved=0CCMQFjAAahUKEwjch-z6if7HAhUBoiwKHXNzCnM&url=http%3A%2F%2Ffmv.jku.at%2Fpapers%2FBiereCimattiClarkeZhu-TACAS99.pdf&usg=AFQjCNGEFrSeZT8dw8fJBV77sUxBmA-Ijg"> Symbolic Model Checking Without BDDs</a> by Biere et al. </li>
+  </ul>
+
+</p>
+
+
+<hr>
+
+<H2> Tuesday 25.09.2018</H2>
+
+<p> 
+  We will cover temporal logics (LTL and CTL). 
+  Slides are 
+<a href="2IMF20_Lecture04.pdf">here</a>. 
+These slides correspond to Chapter 4 of the reader above. </p>
+
+<hr>
+
+<H2> Thursday 20.09.2018</H2>
+
+<p> ** Bring your laptops ! ** 
+We will then make groups and give logins and passwords for the server. 
+You are required to work in teams of 2 or 3 students. 
+This is mainly due to the limited 
+number of licenses (20) for Jasper Gold. We will give a short demo about 
+the tool Jasper Gold and System Verilog Assertions. 
+You will then work on the second preparation exercise, namely, 
+a tutorial to Jasper Gold. 
+
+Below, you will find some materials about System Verilog Assertions:
+  <ul>
+    <li> A short <a href="bsnug04_ecker_esen_kruse_steininger_jensen.pdf"> document</a> 
+    that is a bit old, but still seems like a good way to start </li>
+    <li> Some <a href="SvaFvTutorialHVC2013.pdf"> slides</a> about a more 
+    recent tutorial. The slides make a nice link between LTL and
+      SVAs. You do not need to read the entire set of slides. We will cover
+      LTL next week. 
+      You can stop at page 70/118. </li>
+  </ul> 
+</p>
+
+<hr>
+
+<H2> Tuesday 18.09.2018</H2>
+
+<p> ** NO LECTURE **. </p>
+
+<hr>
+
+<H2> Thursday 13.09.2018</H2>
+
+<p> We continued about reachability, SEC, and BDD's. We will have a quick
+look at the solutions to the first preparation exercise. We also 
+talked about reachability using k-induction and SAT. For more detail 
+about this, please look at section IV of the paper 
+titled "SAT-solving in practice" below.</p>
+
+<p> <b> Reading Assignment </b> Here is a good paper summarizing the use of BDDs 
+in hardware verification, a good definition of the k-induction principle, 
+and a paper summarizing the practice of SAT solving. 
+  <ul>
+    <li> <a href="http://www.cs.ubc.ca/~ajh/mypapers/97H1.ps.gz"> 
+    "Formal Hardware Verification with BDDs: An Introduction"</a> by A. Hu.</li>
+    <li> <a href="http://www.ccs.neu.edu/home/wahl/Publications/k-induction.pdf">
+    "The k-Induction Principle"</a> by Thomas Wahl. </li>
+    <li> <a href="http://www.cse.chalmers.se/edu/year/2012/course/TDA956/Papers/satFinal.pdf">
+    "SAT-solving in practice"</a> by Koen Claessen, Nikla Een, Mary Sheeran, and 
+    Niklas Sorensson. </li> 
+  </ul>
+
+</p>
+
+<hr>
+
+<H2> Tuesday 11.09.2018</H2>
+
+<p> We will check how things are going with the first preparation exercise. 
+  We will then have a look at the basics of SAT solvers. 
+  A description of the SAT algorithm can also be found in Section 2.2. of 
+  Chapter 2 above. 
+  The slides about SAT are <a href= "BMC-lecture_slides_SAT.pdf"> here</a>. 
+Finally, we will discuss sequential equivalence checking
+and reachability using BDD's. 
+BDD's are detailed in Section 2.1.5 of Chapter 2 above. 
+We provide you with a reference below for the lecture materials. 
+The slides about SEC are  <a href = "2IMF20_Lecture03_2018.pdf"> here.</a> 
+</p>
+
+<p> <b> Reading assignment </b> 
+  Before the next lecture, you should read the following papers:
+  <ul>
+    <li> <a href="http://ieeexplore.ieee.org/xpl/articleDetails.jsp?arnumber=1438281"> Principles of Sequential Equivalence Verification </a>
+     by Mneimneh and Sakallah. This paper is a bit out-dated but gives a good overview of techniques for sequential equivalence checking. </li>
+     </li>
+  </ul>
+
+</p>
+
+<hr>
+
+<H2> Thursday 06.09.2018</H2>
+
+<p> The second lecture will be about representations for Boolean functions
+  and Combinational Equivalence checking. 
+  Slides that I plan to present during the lecture 
+  are available <a href="2IMF20_Lecture02.pdf">here</a>. 
+  This lecture will cover Chapter 2 of the reader (see above).
+  We will postpone sections 2.1.5 and 2.2 to another lecture. </p>
+
+<p> <b> Reading assignment </b> The lecture will be based on Chapter 2
+of the reader (see above) and the paper. Before or after the lecture, 
+you should read it. It will give your more details about AIGs and their
+  use in CEC, in particular, following the FRAIG approach.
+
+  <ul>
+    <li> <b> FRAIGS: A Unifying Representation for Logic Synthesis 
+    and Verification.</b> by Mischenko et al.
+    You can find the paper <a href="http://www.eecs.berkeley.edu/~alanmi/publications/2005/tech05_fraigs.pdf"> here </a>.</li>
+  </ul>
+
+  </p>
+
+<hr>
+
+
+<H2> Tuesday 04.09.2018</H2>
+
+<p> This first lecture will be an introduction to formal verification. We will 
+also do a quick check about the course pre-requisites, and other topics like using UNIX-like 
+operating systems and the Verilog Hardware Description Language. 
+ The slides I am planning to present during the lecture are available <a href="2IMF20_Lecture01.pdf">here</a>.
+ </p>
+
+
+<p> <b> Reading assignments </b> Before Thursday September 6th you should have read the following papers:
+
+  <ul>
+    <li> <a href="http://link.springer.com/chapter/10.1007%2F978-3-642-02658-4_32"> "Replacing Testing with Formal
+    Verification in Intel Core i7 Processor Execution Engine Validation." Kaivola et al. CAV 2009</a> 
+    This paper discusses Intel's experience in using formal methods <i> instead of </i> simulation 
+    for part of their processor design. </li> 
+    <li> <b> ACL2 and Its Applications to Digital System Verification</b> by Kaufmann and Moore. This is Chapter 01 of 
+      the following <a href="http://www.springer.com/gp/book/9781441915382"> book</a>. 
+      This chapter is a gently introduction into ACL2 and its use in hardware verification. </li>
+    <li> <b> Use of Formal Verification at Centaur Technology</b> by Hunt et al. This is Chapter 03 of 
+      the following <a href="http://www.springer.com/gp/book/9781441915382"> book</a>. This paper 
+      presents a verification flow based on ACL2 to verify execution units of an x86 processor. </li>     
+  </ul>
+
+</p> 
+
+<hr>
+
+
+<p> Below you will find the course schedule and the slides used during the lecture. Note that most of the
+schedule is tentative and might be modified. </p>
+
+
+<table style="width:100%">
+  <tr>
+    <td> <b>Location</b> </td>
+    <td> <b>Date</b> </td>
+    <td> <b>Topic</b></td>  
+  </tr>
+
+  <tr>
+    <td> TR VAN TRIER </td>
+    <td> 04-09-18 </td>
+    <td> Introduction. <a href="2IMF20_Lecture01.pdf">Slides</a>
+    </td>  
+  
+  </tr>
+
+  <tr>
+    <td> AUD 13 </td>
+    <td> 06-09-18 </td>
+    <td> Representing Boolean expressions and Combinatorial Equivalence. 
+      <a href="2IMF20_Lecture02.pdf">Slides</a>
+    </td>
+  </tr>
+
+  <tr>
+    <td> TR VAN TRIER </td>
+    <td> 11-09-18 </td>
+    <td> Basic of SAT solving <a href="BMC-lecture_slides_SAT.pdf">Slides</a> + 
+      Reachability and Sequential Equivalence (SEC) <a href="2IMF20_Lecture03_2018.pdf">Slides</a>. 
+    </td>               
+  </tr>
+
+  <tr>
+    <td> AUD 13 </td>
+    <td> 13-09-18 </td>
+    <td> Continue SEC, BDDs, and k-induction. <!-- <a href="2IMF20_Lecture03_part2.pdf">Slides</a> --> 
+    </td>
+  </tr>
+
+
+  <tr>
+    <td> TR VAN TRIER </td>
+    <td> 18-09-18  </td>
+    <td> ** NO LECTURE **  </td>              
+  </tr>
+
+  <tr>
+    <td> AUD 13 </td>
+    <td> 20-09-18 </td>
+    <td> Tutorial about Jasper Gold. Bring your laptop. </td>
+  </tr>
+
+  <tr>
+    <td> TR VAN TRIER </td>
+    <td> 25-09-18 </td>
+    <td> Temporal Logics. <a href="2IMF20_Lecture04.pdf">Slides</a> </td>               
+  </tr>
+
+  <tr>
+    <td> AUD 13</td>
+    <td> 27-09-18 </td>
+    <td> Continue Temporal Logics. <a href="2IMF20_Lecture04_part2.pdf">Slides</a> 
+      Symbolic and Bounded Model Checking <a href="2IMF20_Lecture05.pdf">Slides</a>.</td>
+  </tr>
+
+  <tr>
+    <td> TR VAN TRIER </td>
+    <td> 02-10-18 </td>
+    <td> Continue with BMC. </td>               
+  </tr>
+
+  <tr>
+    <td> AUD 13 </td>
+    <td> 04-10-18 </td>
+    <td> ** NO LECTURE **</td>
+  </tr>
+
+   <tr>
+    <td> TR VAN TRIER  </td>
+    <td> 9-10-18 </td>
+    <td> Guest lecture Dialog Semiconductors. Slides are available on CANVAS.</td>               
+  </tr>
+
+  <tr>
+    <td> AUD 13 </td>
+    <td> 11-10-18 </td>
+    <td> Practical session to help with design project.</td>
+  </tr>
+
+   <tr>
+    <td> TR VAN TRIER  </td>
+    <td> 16-10-18 </td>
+    <td> Guest lecture NXP. Slides are available on CANVAS. </td>               
+  </tr>
+
+  <tr>
+    <td> AUD 13 </td>
+    <td> 18-10-18 </td>
+    <td> Practical session to help with design project. <!-- Verification of Communication Fabrics.  --><!-- <a href="2IMF20_Lecture06.pdf">Slides</a> --> </td>
+  </tr>
+
+  <tr>
+    <td> TR VAN TRIER </td>
+    <td> 23-10-18 </td>
+    <td> Feedback design project + Look at a previous Examination + Q&A.  </td>               
+  </tr>
+
+  <tr>
+    <td> AUD 13 </td>
+    <td> 25-10-18 </td>
+    <td> No lecture. </td>
+  </tr>
+
+  <tr>
+    <td> TR VAN TRIER </td>
+    <td> 30-10-18 </td>
+    <td> Q&A. Come and ask questions ! </td>
+  </tr>
+
+<tr>
+    <td> AUD 13 </td>
+    <td> 01-11-18 </td>
+    <td> No lecture. </td>
+  </tr>
+  
+</table>
+
+<hr>
+</BODY>
+</HTML>
+

@@ -1,0 +1,54 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+        
+        <title> Julien Schmaltz | TU Eindhoven | Teaching | 2IMF20 | Assignment 1</title>
+    </head>
+<BODY>
+<H1>2IMF20 Hardware Verification - Assignment 1 CEC with SAT</H1>
+
+
+<p> Please email me your completed program (cmbcmp-sat.c only, with any additional files you added, but not the SAT solver, the object files, the benchmarks, etc.) and
+  a brief plain text description (so <b> as a plain text file (that is with extension .txt)</b>) of your results on the ISCAS 85 benchmarks. Be sure to start early! </p>
+
+  
+<p> Your task is to write a combinational circuit comparison program. The program will take the names of two input files containing circuits and will print whether or not the circuits are functionally equivalent. If they are not, the program should print an input vector that distinguishes the two circuits. </p>
+
+<p> To give you interesting data to work with, I'm providing a copy of the
+  <a href="http://www.cs.ubc.ca/~ajh/courses/cpsc513/assign-cmbcmp-bdd/ISCAS85/"> ISCAS 85</a> benchmarks. This is an industry-standard set of combinational benchmarks.
+  (I realize this benchmark set is older than many of you are, but it's still used in some papers even now.) The benchmarks have names like "c1908".
+  You are to use your program to compare the version of the circuit in the DATA subdirectory (e.g. "c1908.isc") with a logic-optimized version of the same circuit in
+  the NONREDUN subdirectory (e.g. "c1908nr.isc"). These circuits are supposed to be the same. Note, however, that in the past there were bugs in the
+  benchmark set -- circuits that were supposed to be the same were actually different. You can see if your program can catch these mistakes by comparing against
+  the old versions in the NONREDUN subdirectory (e.g. "c1908nr_old.isc").<p>
+
+
+<p> Your task is to write a combinational circuit comparison program using a SAT solver. 
+  Your program will take the names of two input files containing circuits and will print a SAT instance that is satisfiable iff the circuits are different.
+  The SAT solution tells you what input assignment will make the circuits give different results, but it's entirely optional if you want to write a helper program to translate
+  the SAT output back into the names of the inputs to the circuits. 
+    You'll test your program on the ISCAS 85 benchmarks. </p> 
+
+<p> You need a SAT solver to complete this assignment. Here are three links to popular solvers. They all should read CNF or DIMACS files:
+   <ul>
+   <li> <a href = "http://fmv.jku.at/lingeling/"> Plingeling </a> </li>
+   <li> <a href = "http://www.labri.fr/perso/lsimon/glucose/"> Glucose</a> </li>
+   <li> <a href = "https://github.com/Z3Prover/z3"> Z3</a> </li> 
+   </ul>
+
+  Below, you will find a skeleton code that reads ISCAS 85 files, builds up a circuit data structure in memory,
+    and generates most of the needed clauses in the <a href="http://www.cs.ubc.ca/~hoos/SATLIB/Benchmarks/SAT/satformat.ps"> DIMACS CNF format</a>
+    that the SAT solver wants. Feel free to use or modify as much of this code as you wish.
+  (The easiest thing to do is just search for "FIX THIS!!!" in the skeleton code and make your changes there.)
+  The assignment took me very little time; I expect it will take you longer, as you'll need to familiarize yourself with the code and the SAT solver. 
+  <ul>
+    <li> <a href="cec_sat_template.c"> Skeleton C program for this project. </a> </li>
+  </ul>
+
+</p>
+
+
+
+<p> Note that this assignment is a slight adaptation of the assignments proposed by Alan Hu.
+  <a href="http://www.cs.ubc.ca/~ajh/courses/cpsc513/"> Here</a> is his course webpage. Thanks Alan! </p>
